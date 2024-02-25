@@ -37,6 +37,7 @@ public class Register {
     private JPanel adicionalPanel;
 
     public Register() {
+//        Listener para enviar la info a la base de datos
         enviarBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,6 +49,15 @@ public class Register {
             }
         });
 
+//        Listener para cerrar al dar click al boton "Cerrar"
+        cerrarBtn.addActionListener(e -> {
+            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(mainPanel);
+            if (frame != null) {
+                frame.dispose();
+            }
+        });
+
+//        Grupo de radiobutton, para que solo pueda seleccionar uno
         ButtonGroup grupoTamano = new ButtonGroup();
         grupoTamano.add(pequenoRb);
         grupoTamano.add(medianoRb);
@@ -66,6 +76,7 @@ public class Register {
         sencilloRb.setSelected(true);
         noRb.setSelected(true);
 
+//        Fecha de hoy
         fechaTxt.setText(LocalDate.now().toString());
     }
 
