@@ -145,7 +145,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <toolTipText value="Fecha (yyyy-mm-dd)"/>
+                  <toolTipText value="Fecha (Año-Mes-Dia)"/>
                 </properties>
               </component>
               <component id="60894" class="javax.swing.JTextField" binding="valorTxt">
