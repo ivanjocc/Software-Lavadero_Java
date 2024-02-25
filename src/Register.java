@@ -80,11 +80,11 @@ public class Register {
         fechaTxt.setText(LocalDate.now().toString());
     }
 
-
     public JPanel getMainPanel() {
         return mainPanel;
     }
 
+//    Funcion para enviar info a la base de datos
     private void enviarDatos() throws SQLException {
         DatabaseHelper db = new DatabaseHelper();
         Connection conexion = db.conectarConDB();
@@ -120,6 +120,7 @@ public class Register {
         }
     }
 
+//    Funcion para enviar info a la base de datos pero incluyendo el SQL
     private void insertarEnBaseDeDatos(Connection conexion, String placa, String propietario, int telefono, Date fecha, int valor, String tamano, String tipoLavado, String adicional) throws SQLException {
         String sql = "INSERT INTO info (placa, propietario, telefono, fecha, valor, tamano, tipo_lavado, adicional) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement statement = conexion.prepareStatement(sql)) {
@@ -150,6 +151,7 @@ public class Register {
         }
     }
 
+//    Funcion para reiniciar el formulario
     private void resetFormulario() {
         placaTxt.setText("");
         propietarioTxt.setText("");
