@@ -78,6 +78,12 @@ public class Register {
 
 //        Fecha de hoy
         fechaTxt.setText(LocalDate.now().toString());
+
+//        Listener para ocultar el form para ingresar la info
+        listaBtn.addActionListener(e -> {
+            mainPanel.setVisible(false);
+        });
+
     }
 
     public JPanel getMainPanel() {
