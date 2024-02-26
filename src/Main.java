@@ -13,7 +13,7 @@ public class Main {
                 frame.setContentPane(registerForm.getMainPanel());
 
                 frame.pack();
-                frame.setSize(1000, 600);
+                frame.setSize(1000, 400);
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
             }
