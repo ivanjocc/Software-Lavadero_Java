@@ -1,4 +1,5 @@
 create database lavadero;
+--use bcohbd0oyjx7z9rwzyqx;
 
 create table info(
 	id int primary key auto_increment,

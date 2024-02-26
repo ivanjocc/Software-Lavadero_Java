@@ -162,7 +162,7 @@ public class Register {
         placaTxt.setText("");
         propietarioTxt.setText("");
         telefonoTxt.setText("");
-        fechaTxt.setText("");
+        fechaTxt.setText(LocalDate.now().toString());
         valorTxt.setText("");
 
         pequenoRb.setSelected(true);
